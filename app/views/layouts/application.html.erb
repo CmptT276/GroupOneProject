@@ -1,14 +1,104 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Buzzit</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Buzzit | <%= yield(:title) %></title>
+    <%= stylesheet_link_tag    'application', media: 'all',
+                                              'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= yield %>
 
-<%= yield %>
+<table border="1" width="100%" style="border-width: 0px" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="border-style: none; border-width: medium">
+		
+		<!-- Start Header -->
+		<table border="1" width="100%" style="border-width: 0px" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="border-style: none; border-width: medium">
+				<table border="1" width="100%" style="border-width: 0px" cellspacing="0" cellpadding="0">
+					<tr>
+						<td style="border-top: 4px solid #000000" colspan="2" bgcolor="#FFCC00" height="40">
+						<table border="1" width="100%" style="border-width: 0px">
+							<tr>
+								<td style="border-style: none; border-width: medium">
+								<p align="right">
+								<font face="Yu Gothic UI Semilight" size="2">
+								<img border="0" src="images/cart.png" width="19" height="14"> 
+								Shopping Cart <b>|</b> Login </font></td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-style: none; border-width: medium" width="25%">
+						<img border="0" src="images/logo.png" width="470" height="150"></td>
+						<td style="border-style: none; border-width: medium" width="75%">
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="border-style: none; border-width: medium" colspan="2" height="60" bgcolor="#FFF4CA">
+						<table border="1" width="100%" style="border-width: 0px">
+							<tr>
+								<td style="border-style: none; border-width: medium" width="35%">
+								<table border="1" style="border-width: 0px">
+									<tr>
+										<td style="border-style: none; border-width: medium">
+										<img border="0" src="images/department_list.png" width="32" height="32"></td>
+										<td style="border-style: none; border-width: medium">
+										<font face="Yu Gothic UI Semilight">&nbsp;Shop 
+										All Departments</font></td>
+									</tr>
+								</table>
+								</td>
+								<td style="border-style: none; border-width: medium">&nbsp;</td>
+								<td style="border-style: none; border-width: medium" width="35%">
+								<table border="1" width="100%" style="border-width: 0px" cellpadding="0">
+									<tr>
+										<td style="border-style: none; border-width: medium">
+										<input type="text" name="T1" size="20" style="border:2px solid #C0C0C0; height: 40; width:100%"></td>
+										<td style="border-style: none; border-width: medium" width="30%" bgcolor="#CEE1FF">
+										<p align="center"><b>
+										<font face="Yu Gothic UI Semilight" size="2">
+										Search</font></b></td>
+									</tr>
+								</table>
+								</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		<!-- End Header -->
+		
+		<!-- Start Content -->
+		<%= yield %>
+		<!-- End Content -->
+		
+		<!-- Start Footer -->
+		<table border="1" width="100%" style="border-width: 0px" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="border-bottom:4px solid #000000; " bgcolor="#808080">
+				<font face="Yu Gothic UI Semilight">copyright © 2016, All rights 
+				reserved.<br>
+				This footer is temporary and will be updated before submission.</font></td>
+			</tr>
+		</table>
+		<!-- End Footer -->
+		</td>
+	</tr>
+</table>
 
 </body>
+
 </html>
