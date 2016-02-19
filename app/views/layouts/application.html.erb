@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Buzzit | <%= yield(:title) %></title>
+    <title><%= full_title(yield(:title)) %></title>s
     <%= stylesheet_link_tag    'application', media: 'all',
                                               'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= yield %>
 
 <table border="1" width="100%" style="border-width: 0px" cellspacing="0" cellpadding="0">
 	<tr>
@@ -26,7 +25,7 @@
 								<td style="border-style: none; border-width: medium">
 								<p align="right">
 								<font face="Yu Gothic UI Semilight" size="2">
-								<img border="0" src="images/cart.png" width="19" height="14"> 
+									<%=image_tag("cart.png", alt: "Shopping Cart")%>
 								Shopping Cart <b>|</b> Login </font></td>
 							</tr>
 						</table>
@@ -34,7 +33,7 @@
 					</tr>
 					<tr>
 						<td style="border-style: none; border-width: medium" width="25%">
-						<img border="0" src="images/logo.png" width="470" height="150"></td>
+						<%=image_tag("logo.png", alt: "Buzzit")%></td>
 						<td style="border-style: none; border-width: medium" width="75%">
 						<br>
 						<br>
@@ -51,7 +50,7 @@
 								<table border="1" style="border-width: 0px">
 									<tr>
 										<td style="border-style: none; border-width: medium">
-										<img border="0" src="images/department_list.png" width="32" height="32"></td>
+										<%=image_tag("department_list.png", alt: "List All Departments")%></td>
 										<td style="border-style: none; border-width: medium">
 										<font face="Yu Gothic UI Semilight">&nbsp;Shop 
 										All Departments</font></td>
