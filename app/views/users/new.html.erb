@@ -1,3 +1,180 @@
-<% provide(:title, "Sign Up") %>
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<% provide(:title, 'Sign up') %>
+        <table>
+			<tr>
+				<td>
+                <%= render 'layouts/space' %>
+				<table>
+					<tr>
+						<td class="signup_side">
+						<table>
+							<tr>
+								<td class="signup_side_head">
+								Why 
+								Create an Account?</td>
+							</tr>
+							<tr>
+								<td>
+								Creating an 
+								account would give you the following benefits<br>
+&nbsp;<table>
+									<tr>
+										<td class="signup_side_icon">
+										<%=image_tag("shopping-icon.png", alt: "Buy from students")%></td>
+										<td>
+										<table>
+											<tr>
+												<td class="signup_side_title">
+										Buy from students in your campus</td>
+											</tr>
+											<tr>
+												<td class="signup_side_desc">
+										You can buy new or used 
+										products from students at your campus 
+										through our secure store.</td>
+											</tr>
+										</table>
+										</td>
+									</tr>
+									<tr>
+										<td class"signup_side_icon">
+										<%=image_tag("Online-Shopping-icon.png", alt: "Sell to students")%></td>
+										<td>
+										<table>
+											<tr>
+												<td class="signup_side_title">
+										Sell products to other students</td>
+											</tr>
+											<tr>
+												<td class="signup_side_desc">
+										You can sell products to 
+										other students in your campus with our 
+										store. You do not have to worry about 
+										printing flyers to sell anymore.</td>
+											</tr>
+										</table>
+                                        </td>
+									</tr>
+									<tr>
+										<td class"signup_side_icon">
+										<%=image_tag("Credit-Card-icon.png", alt: "Accepting different payments")%></td>
+										<td>
+										<table>
+											<tr>
+												<td class="signup_side_title">
+										Different methods of payments</td>
+											</tr>
+											<tr>
+												<td class="signup_side_desc">
+										We help you in accepting different 
+										methods of payment, such as Credit 
+										Cards, email transfer, and Cash.</td>
+											</tr>
+										</table>
+                                        </td>
+									</tr>
+								</table>
+								</td>
+							</tr>
+						</table>
+						</td>
+						<td class="signup_container">
+						<%= form_for(@user) do |f| %>
+						<table>
+							<tr>
+								<td class="signup_content_style">&nbsp;<table class="signup_table_style">
+									<tr class="signup_form_head">
+										<td class="signup_td_style">
+										Sign Up
+										<%= render 'shared/error_messages' %></td>
+									</tr>
+									<tr>
+										<td class="signup_td_style">
+										<table>
+											<tr>
+												<td>
+												&nbsp;</td>
+												<td class="signup_form_title">
+												&nbsp;User 
+												Name:</td>
+											</tr>
+											<tr>
+												<td colspan="2">
+												<table>
+													<tr>
+														<td class="signup_form_input_holder">
+														<%= f.text_field :name %></td>
+													</tr>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td>&nbsp;</td>
+												<td class="signup_form_title">
+												&nbsp;Email 
+												Address:</td>
+											</tr>
+											<tr>
+												<td colspan="2">
+												<table>
+													<tr>
+														<td class="signup_form_input_holder">
+														<%= f.email_field :email %></td>
+													</tr>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td>&nbsp;</td>
+												<td class="signup_form_title">
+												&nbsp;Password:</td>
+											</tr>
+											<tr>
+												<td colspan="2">
+												<table>
+													<tr>
+														<td class="signup_form_input_holder">
+														<%= f.password_field :password %></td>
+													</tr>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td>&nbsp;</td>
+												<td class="signup_form_title">
+												&nbsp;Confirm 
+												Password:</td>
+											</tr>
+											<tr>
+												<td colspan="2">
+												<table>
+													<tr>
+														<td class="signup_form_input_holder">
+														<%= f.password_field :password_confirmation %></td>
+													</tr>
+												</table>
+												</td>
+											</tr>
+										</table>
+										<table>
+											<tr>
+												<td width="70%">&nbsp;</td>
+												<td class="button_holder">
+												<%= f.submit "Create my account", class: "button_submit" %></td>
+											</tr>
+										</table>
+										</td>
+									</tr>
+								</table>
+								</td>
+							</tr>
+						</table>
+						<% end %>
+						<p><font face="Yu Gothic UI Semilight" size="2">- Forgot 
+						your password?<br>
+						- You already have an account? Sign in here.</font></td>
+					</tr>
+				</table>
+				<%= render 'layouts/space' %>
+				</td>
+			</tr>
+		</table>

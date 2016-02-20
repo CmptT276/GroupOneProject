@@ -1,58 +1,49 @@
 <!-- Start Header -->
-		<table border="1" width="100%" style="border-width: 0px" cellspacing="0" cellpadding="0">
+		<table>
 			<tr>
-				<td style="border-style: none; border-width: medium">
-				<table border="1" width="100%" style="border-width: 0px" cellspacing="0" cellpadding="0">
+				<td>
+				<table>
 					<tr>
-						<td style="border-top: 4px solid #000000" colspan="2" bgcolor="#FFCC00" height="40">
-						<table border="1" width="100%" style="border-width: 0px">
+						<td class="header_bar" colspan="2">
+						<table>
 							<tr>
-								<td style="border-style: none; border-width: medium">
-								<p align="right">
-								<font face="Yu Gothic UI Semilight" size="2">
+								<td class="header_bar_content">
 								<%=image_tag("cart.png", alt: "Shopping Cart")%>
 								Shopping Cart <b>|</b> Login to Account <b>|</b> 
-								<%= link_to "Sign Up!", register_path %> </font></td>
+								<%= link_to "Sign Up!", register_path %> </td>
 							</tr>
 						</table>
 						</td>
 					</tr>
 					<tr>
-						<td style="border-style: none; border-width: medium" width="25%">
+						<td class="logo">
 						<%=image_tag("logo.png", alt: "Buzzit")%></td>
-						<td style="border-style: none; border-width: medium" width="75%">
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
+						<td class="logo_side">
 &nbsp;</td>
 					</tr>
 					<tr>
-						<td style="border-style: none; border-width: medium" colspan="2" height="60" bgcolor="#FFF4CA">
-						<table border="1" width="100%" style="border-width: 0px">
+						<td class="nav_bar" colspan="2">
+						<table>
 							<tr>
-								<td style="border-style: none; border-width: medium" width="35%">
-								<table border="1" style="border-width: 0px">
+								<td class="nav_bar_holders">
+								<table>
 									<tr>
-										<td style="border-style: none; border-width: medium">
-										<%=image_tag("department_list.png", alt: "List All Departments")%></td>
-										<td style="border-style: none; border-width: medium">
-										<font face="Yu Gothic UI Semilight">&nbsp;Shop 
-										All Departments</font></td>
+										<td>
+										&nbsp;<%=image_tag("department_list.png", alt: "List All Departments")%></td>
+										<td class="all_departments">
+										&nbsp;Shop 
+										All Departments</td>
 									</tr>
 								</table>
 								</td>
-								<td style="border-style: none; border-width: medium">&nbsp;</td>
-								<td style="border-style: none; border-width: medium" width="35%">
-								<table border="1" width="100%" style="border-width: 0px" cellpadding="0">
+								<td>&nbsp;</td>
+								<td class="nav_bar_holders">
+								<table>
 									<tr>
-										<td style="border-style: none; border-width: medium">
-										<input type="text" name="T1" size="20" style="border:2px solid #C0C0C0; height: 40; width:100%"></td>
-										<td style="border-style: none; border-width: medium" width="30%" bgcolor="#CEE1FF">
-										<p align="center"><b>
-										<font face="Yu Gothic UI Semilight" size="2">
-										Search</font></b></td>
+										<td>
+										<input type="text" name="T1" size="20"></td>
+										<td class="search_button">
+										Search</td>
 									</tr>
 								</table>
 								</td>

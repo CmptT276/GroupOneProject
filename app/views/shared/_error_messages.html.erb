@@ -1,0 +1,12 @@
+<% if @user.errors.any? %>
+<table border="1" width="100%" style="border-width: 0px">
+	<tr>
+		<td class="error_message_box">
+			The form contains <%= pluralize(@user.errors.count, "error") %>.
+			    <% @user.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+		</td>
+	</tr>
+</table>
+<% end %>
