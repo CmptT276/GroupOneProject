@@ -1,5 +1,207 @@
 <% provide(:title, @user.name) %>
-<h1>
-  <%= gravatar_for @user %>
-  <%= @user.name %>
-</h1>
+		<table>
+			<tr>
+				<td>
+				<%= render 'layouts/space' %>
+				<table>
+					<tr>
+						<td class="account_navbar_holder">
+						<%= render 'users/account_navbar' %>
+						</td>
+						<td class="account_main_holder">
+						<table>
+							<tr>
+								<td>&nbsp;<%= gravatar_for @user %></td>
+								<td class="account_welcome_message">
+								<table>
+									<tr>
+										<td class="account_welcome_message">&nbsp;Welcome 
+								<%= @user.name %></td>
+									</tr>
+									<tr>
+										<td class="account_welcome_options">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+								<%= link_to "Edit Settings", edit_user_path(current_user) %> | Edit Profile</td>
+									</tr>
+								</table>
+								</td>
+							</tr>
+						</table>
+						<table>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+						</table>
+						<table>
+							<tr>
+								<td>
+								<table>
+									<tr>
+										<td class="account_content_title">
+										Your Recent Selling Products:</td>
+									</tr>
+									<tr>
+										<td>
+										<table class="account_main_recent_holder">
+											<tr>
+												<td class="account_main_recent_selling">
+												<table>
+													<tr>
+														<td class="account_main_recent_img" colspan="2">
+														<img border="0" src="images/Credit-Card-icon.png" width="128" height="128"></td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Name:</td>
+														<td class="account_main_recent_info">
+														Sweater</td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Price:</td>
+														<td class="account_main_recent_info">
+														&nbsp;$10.95</td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Buzzed:</td>
+														<td class="account_main_recent_info">
+														&nbsp;5</td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Qty:</td>
+														<td class="account_main_recent_info">
+														&nbsp;1</td>
+													</tr>
+												</table>
+												</td>
+												<td class="account_main_recent_selling">
+												<table>
+													<tr>
+														<td class="account_main_recent_img" colspan="2">
+														<img border="0" src="images/Credit-Card-icon.png" width="128" height="128"></td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Name:</td>
+														<td class="account_main_recent_info">
+														Sweater</td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Price:</td>
+														<td class="account_main_recent_info">
+														&nbsp;$10.95</td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Buzzed:</td>
+														<td class="account_main_recent_info">
+														&nbsp;5</td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Qty:</td>
+														<td class="account_main_recent_info">
+														&nbsp;1</td>
+													</tr>
+												</table>
+												</td>
+												<td class="account_main_recent_selling">
+												<table>
+													<tr>
+														<td class="account_main_recent_img" colspan="2">
+														<img border="0" src="images/Credit-Card-icon.png" width="128" height="128"></td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Name:</td>
+														<td class="account_main_recent_info">
+														Sweater</td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Price:</td>
+														<td class="account_main_recent_info">
+														&nbsp;$10.95</td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Buzzed:</td>
+														<td class="account_main_recent_info">
+														&nbsp;5</td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Qty:</td>
+														<td class="account_main_recent_info">
+														&nbsp;1</td>
+													</tr>
+												</table>
+												</td>
+												<td class="account_main_recent_selling">
+												<table>
+													<tr>
+														<td class="account_main_recent_img" colspan="2">
+														<img border="0" src="images/Credit-Card-icon.png" width="128" height="128"></td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Name:</td>
+														<td class="account_main_recent_info">
+														Sweater</td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Price:</td>
+														<td class="account_main_recent_info">
+														&nbsp;$10.95</td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Buzzed:</td>
+														<td class="account_main_recent_info">
+														&nbsp;5</td>
+													</tr>
+													<tr>
+														<td class="account_main_recent_label">
+														Qty:</td>
+														<td class="account_main_recent_info">
+														&nbsp;1</td>
+													</tr>
+												</table>
+												</td>
+											</tr>
+										</table>
+										</td>
+									</tr>
+								</table>
+								<%= render 'layouts/space' %>
+								<table>
+									<tr>
+										<td class="account_content_title">
+										Purchased Products:</td>
+									</tr>
+									<tr>
+										<td>
+										<table>
+											<tr>
+												<td style="border: 2px solid #FFEB99" bgcolor="#FFFAE6">
+												<p align="center">
+												You did not purchase any 
+												products!</td>
+											</tr>
+										</table>
+										</td>
+									</tr>
+								</table>
+								</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+          <%= render 'layouts/space' %>
+				</td>
+			</tr>
+		</table>
