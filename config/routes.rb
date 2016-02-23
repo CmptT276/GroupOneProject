@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
   get 'register'  => 'users#new'
-  get    'login'   => 'sessions#new'
+  get 'login'     => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
@@ -13,10 +13,10 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'static_pages#home'
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
+  root 'static_pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

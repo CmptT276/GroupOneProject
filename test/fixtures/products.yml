@@ -1,0 +1,29 @@
+Test One:
+  name: "Jeans"
+  content: "These are new from Guess"
+  price: 12
+  created_at: <%= 10.minutes.ago %>
+
+Test Two:
+  name: "Watch"
+  content: "From BOSS"
+  price: 80
+  created_at: <%= 3.years.ago %>
+
+Test Three:
+  name: "Text Book"
+  content: "For CMPT 276"
+  price: 35
+  created_at: <%= 2.hours.ago %>
+
+most_recent:
+  name: "Bike"
+  content: "Used, but in a good condition"
+  price: 120
+  created_at: <%= Time.zone.now %>
+  
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+<% end %>
