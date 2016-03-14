@@ -4,7 +4,5 @@
   <% if current_user.admin? && !current_user?(user) %>
     | <%= link_to "delete", user, method: :delete,
                                   data: { confirm: "You sure?" } %>
-    | <%= link_to "Make admin", user, method: :make_admin,
-                                  data: { confirm: "This user will be admin, are you sure?" } %>
   <% end %>
 </li>

@@ -3,6 +3,10 @@ class CategoriesController < ApplicationController
   
   
   def index
+      products_controller = ProductsController.new
+      products_controller.request = request
+      products_controller.response = response
+      products_controller.index
       @categories = Category.paginate(page: params[:page])
   end
 
