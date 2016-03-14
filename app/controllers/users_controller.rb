@@ -52,6 +52,10 @@ class UsersController < ApplicationController
       redirect_to(root_url) unless current_user.admin?
     end
     
+    def make_admin
+        User.find(params[:id]).toggle!(:admin)
+        redirect_to users_url
+    
     private
 
     def user_params
