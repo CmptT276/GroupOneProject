@@ -9,7 +9,7 @@
 							<tr>
 								<td class="header_bar_content">
 								<%=image_tag("cart.png", alt: "Shopping Cart")%>
-								Shopping Cart <b>| </b><% if logged_in? %> <%= link_to "My Account", current_user %> <b>| </b><%= link_to "Log out", logout_path, method: "delete" %><% else %><%= link_to "Log in", login_path %> <b>|</b> 
+								<%= link_to "Shopping Cart", orders_path %> <b>| </b><% if logged_in? %> <%= link_to "My Account", current_user %> <b>| </b><%= link_to "Log out", logout_path, method: "delete" %><% else %><%= link_to "Log in", login_path %> <b>|</b> 
 								<%= link_to "Sign Up!", register_path %> <% end %></td>
 							</tr>
 						</table>

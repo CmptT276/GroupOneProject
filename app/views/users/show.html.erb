@@ -20,7 +20,7 @@
 									</tr>
 									<tr>
 										<td class="account_welcome_options">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-								<%= link_to "Edit Settings", edit_user_path(current_user) %> | Edit Profile</td>
+								<%= link_to "Edit Settings", edit_user_path(@user) %> | Edit Profile</td>
 									</tr>
 								</table>
 								</td>
@@ -205,3 +205,13 @@
 				</td>
 			</tr>
 		</table>
+		
+  <div class="col-md-8">
+    <% if @user.products.any? %>
+      <h3>Products (<%= @user.products.count %>)</h3>
+      <ol class="products">
+        <%= render @products %>
+      </ol>
+      <%= will_paginate @products %>
+    <% end %>
+  </div>

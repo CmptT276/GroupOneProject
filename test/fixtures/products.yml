@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: "MSE Sweater"
+  description: "This is a brand new sweater, With a black color and white writing on it!"
+  price: 17.38
+  created_at: <%= 10.minutes.ago %>
+  user: michael
+
+two:
+  name: "Nike Shoes"
+  description: "These are running shoes in a very good condition."
+  price: 20.75
+  created_at: <%= 3.years.ago %>
+  user: michael
+  
+three:
+  name: "Parking Permit"
+  description: "This is a parking permit for the summer semester."
+  price: 100
+  created_at: <%= 2.hours.ago %>
+  user: michael
+
+most_recent:
+  name: "History 151 textbook"
+  description: "This is the book required for HIST 151 with Paul Sedra"
+  price: 50
+  created_at: <%= Time.zone.now %>
+  user: michael

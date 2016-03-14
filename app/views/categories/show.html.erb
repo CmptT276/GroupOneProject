@@ -1,0 +1,6 @@
+<h1>Category ID #<%= @category.id %></h1>
+<%= link_to "Back to categories", categories_path %>
+
+<h3><%= @category.name %></h3>
+<p><%= @category.description %></p>
+<p><%= link_to "Edit", edit_category_path(@category)</p>

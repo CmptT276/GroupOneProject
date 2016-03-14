@@ -1,0 +1,21 @@
+<h1>Edit Product ID #<%= @prouct.id %></h1>
+<%= link_to "Back to Products", product_path %>
+
+<%= form_for @product do |f| %>
+  <p>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+  </p>
+  <p>
+      <%= f.label :price %>
+      <%= f.text_field :price %>
+  </p>
+  <p>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+  </p>
+  <p>
+      <%= f.submit %>
+      <%= link_to "Delete", product_path(@product), :method=>:delete %>
+  </p>
+<% end %>

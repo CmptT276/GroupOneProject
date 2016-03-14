@@ -1,19 +1,4 @@
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
-             password:              "foobar",
-             password_confirmation: "foobar",
-             admin:     true,
-             activated: true,
-             activated_at: Time.zone.now)
-
-99.times do |n|
-  name  = Faker::Name.name
-  email = "example-#{n+1}@railstutorial.org"
-  password = "password"
-  User.create!(name:  name,
-              email: email,
-              password:              password,
-              password_confirmation: password,
-              activated: true,
-              activated_at: Time.zone.now)
-end
+Order.delete_all
+Order.create!( id: 1, subtotal: 12.00, tax: 0.00, shipping: 10.00, total: 22.00, status: 3)
+Order.create!( id: 2, subtotal: 102.00, tax: 0.00, shipping: 22.00, total: 124.00, status: 2)
+Order.create!( id: 3, subtotal: 100.00, tax: 7.00, shipping: 10.00, total: 117.00, status: 2)
