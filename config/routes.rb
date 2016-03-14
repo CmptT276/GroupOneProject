@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'order_items/create'
+
+  get 'order_items/update'
+
+  get 'order_items/destroy'
+
+  get 'carts/show'
+
   get 'orders/index'
 
   get 'orders/edit'
@@ -39,7 +47,8 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :products
   resources :categories
-  resources :orders
+  resources :order_items, only: [:create, :update, :destroy]
+  resource :cart, only: [:show]
   root 'static_pages#home'
 
   # Example of regular route:
