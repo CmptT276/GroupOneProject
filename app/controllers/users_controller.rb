@@ -53,8 +53,7 @@ class UsersController < ApplicationController
     end
     
     def make_admin
-        User.find(params[:id]).toggle!(:admin)
-        redirect_to users_url
+        
     end
     
     private
