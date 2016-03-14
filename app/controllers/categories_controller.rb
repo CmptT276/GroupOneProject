@@ -38,4 +38,14 @@ class CategoriesController < ApplicationController
       redirect_to categories_path
   end
   
+  private
+  
+  # Confirms an admin user.
+  def admin_user
+    users_controller = UsersController.new
+    users_controller.request = request
+    users_controller.response = response
+    users_controller.admin_user
+  end
+  
 end
