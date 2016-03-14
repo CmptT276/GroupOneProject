@@ -23,12 +23,26 @@ class ProductsController < ApplicationController
         @categories = Category.all.map{|c| [ c.name, c.id ] }
     end
     
-    def create
-        @product = Product.new(params[:product].permit(:title, :price, :description))
-        @product.category_id = params[:category_id]
-        @product.save
-        redirect_to products_path
+    def create 
+        @product = Product.new(product_params) 
+        @product.category_id = params[:category_id] 
+        respond_to do |format| 
+            if @product.save 
+                format.html { redirect_to @product, notice: 'Product was successfully created.' } 
+                format.json { render :show, status: :created, location: @product } 
+            else 
+                format.html { render :new } 
+                format.json { render json: @product.errors, status: :unprocessable_entity } 
+            end 
+        end 
     end
+    
+#    def create
+#        @product = Product.new(params[:product].permit(:title, :price, :description))
+#        @product.category_id = params[:category_id]
+#        @product.save
+#        redirect_to products_path
+#    end
     
     def update
         if @product = Product.find(params[:id])
