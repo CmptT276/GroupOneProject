@@ -28,11 +28,10 @@ class ProductsController < ApplicationController
         @product.category_id = params[:category_id] 
         respond_to do |format| 
             if @product.save 
-                format.html { redirect_to @product, notice: 'Product was successfully created.' } 
-                format.json { render :show, status: :created, location: @product } 
+                flash[:success] = "Product created successfully!"
+                redirect_to @product
             else 
-                format.html { render :new } 
-                format.json { render json: @product.errors, status: :unprocessable_entity } 
+                flash[:success] = "There was an error creating the product!"
             end 
         end 
     end
