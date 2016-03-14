@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-    
+    before_action :logged_in_user, only: [:create, :destroy]
     
     def index
         @products = Product.paginate(page: params[:page])
@@ -23,25 +23,13 @@ class ProductsController < ApplicationController
         @categories = Category.all.map{|c| [ c.name, c.id ] }
     end
     
-    def create 
-        @product = Product.new(product_params) 
-        @product.category_id = params[:category_id] 
-        respond_to do |format| 
-            if @product.save 
-                flash[:success] = "Product created successfully!"
-                redirect_to @product
-            else 
-                flash[:success] = "There was an error creating the product!"
-            end 
-        end 
+    def create
+        @product = Product.new(params[:product].permit(:name, :price, :description))
+        @product.category_id = params[:category_id]
+        @product.user = current_user
+        @product.save
+        redirect_to products_path
     end
-    
-#    def create
-#        @product = Product.new(params[:product].permit(:title, :price, :description))
-#        @product.category_id = params[:category_id]
-#        @product.save
-#        redirect_to products_path
-#    end
     
     def update
         if @product = Product.find(params[:id])

@@ -3,4 +3,6 @@
 <h3><%= @category.name %></h3>
 <p><%= @category.description %></p>
 
-<%= render @category.products %>
+<% Product.where(category_id: @category.id).each do |product| %>
+<li> <%= product.name %> </li>
+<% end %>

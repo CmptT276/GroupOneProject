@@ -4,7 +4,7 @@
   <% @products.each do |p| %>
   <li>
       <h3><%= p.name %></h3>
-      <small><%= number_to_currency(p.price) %></small>
+      <small><%= p.price %></small>
       <p><%= p.description %></p>
   </li>
   <% end %>

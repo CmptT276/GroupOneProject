@@ -1,7 +1,7 @@
 <h1>Product ID #<%= @product.id %></h1>
 <%= link_to "Back to Products", @product_path %>
 
-<h3><%= @product.title %></h3>
-<small><%= number_to_currency(@product.price %></small>
-<p><%= product.description %></p>
+<h3><%= @product.name %></h3>
+<small><%= @product.price %></small>
+<p><%= @product.description %></p>
 <p><%= link_to "Edit", edit_product_path(@product)</p>
